@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<title>トラットリア Soleil ~ACCESS~</title>
+<link rel="stylesheet" href="resetw.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">
+      <img src="img/logo.jpg" alt="">
+    </a>
+
+    <ul class="nav">
+      <li><a href="menu.html">メニュー</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+</header>
+
+<main>
+  <section class="caption">
+    <h2>アクセス</h2>
+  </section>
+  <section class="access-wrap">
+    <div class="map">
+      <div id="target"></div>
+    </div>
+    <div class="access-contents">
+      <p>
+        <span>住所</span>〒273-0005 
+        千葉県船橋市本町7-12-16
+      </p>
+      <p>
+        <span class="access-span">アクセス:</span>JR船橋駅・東武野田線船橋駅より徒歩4分<br>
+        京成船橋駅より徒歩7分
+      </p>
+      <p>
+        <span>営業時間:</span>11:00 ~ 22:00 (毎週水曜日 定休日)
+      </p>
+      <p>
+        <span>電話番号:</span>TEL 047-425-1051
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Copyright
+</footer>
+
+<script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDDMVXlAjSK6LNhl_Natk9IYUyxglH2AS0&callback=initMap" async defer></script>
+  <script>
+    function initMap() {
+      'use strict';
+      const target = document.getElementById('target');
+      let map;
+      let marker;
+      let point = {lat: 35.704492, lng:139.984415};
+
+      map = new google.maps.Map(target, {
+        center: point,
+        zoom: 15,
+        disableDefaultUI: true,
+        zoomControl: true
+      });
+
+      marker = new google.maps.Marker({
+        position: point,
+        map: map,
+        title: 'トラットリアSoleil',
+        animation: google.maps.Animation.DROP,
+      });
+    }
+  </script>
+</body>
+</html>

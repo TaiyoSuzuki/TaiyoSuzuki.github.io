@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Todo List</title>
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>
+      Todoリスト
+      <span class="info">({{ remaining.length }}/{{ todos.length }})</span>
+    </h1>
+    <div class="buttons">
+      <button v-on:click="purge">完了済を削除</button>
+      <button v-on:click="allDel">全て削除</button>
+    </div>
+    <ul>
+      <li v-for="(todo, index) in todos">
+        <input type="checkbox" v-model="todo.isDone">
+        <span v-bind:class="{done: todo.isDone}">{{ todo.title }}</span>
+        <span v-on:click="deleteItem(index)" class="close">[×]</span>
+      </li>
+      <li v-show="!todos.length">タスクはありません</li>
+    </ul>
+    <form v-on:submit.prevent="addItem">
+      <input type="text" v-model="newItem">
+      <input type="submit" value="追加">
+    </form>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

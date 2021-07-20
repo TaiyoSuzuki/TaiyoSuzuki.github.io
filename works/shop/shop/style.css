@@ -1,0 +1,403 @@
+@charset"utf-8";
+
+body {
+  font-family: "Helvetica Neue",
+  Arial,
+  "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif;
+
+}
+
+header {
+  height: 80px;
+  background: hsl(0, 30%, 30%);
+  display: flex;
+  justify-content: space-between;
+  position:fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+}
+
+.logo {
+  width: 195px;
+  height: 80px;
+  margin-left: 80px;
+}
+
+.logo > img {
+  height: 80px;
+}
+
+ul.nav {
+  margin-right: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+ul.nav a{
+  display: inline-block;
+  width: 8vw;
+  min-width: 100px;
+  list-style: none;
+  background: hsla(20, 50%, 50%);
+  line-height: 80px;
+  text-align: center;
+  margin: 0 1px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+ul.nav a::before,
+ul.nav a::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+ul.nav a,
+ul.nav a::before,
+ul.nav a::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+ul.nav a:hover {
+  background-color: #fff;
+  color: hsla(20, 50%, 50%);
+}
+
+ul.nav a::before,
+ul.nav a::after {
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: hsla(20, 50%, 50%);
+}
+
+ul.nav a::before {
+  right: 0;
+}
+
+ul.nav a::after {
+  left: 0;
+}
+
+ul.nav a:hover::before,
+ul.nav a:hover::after {
+  width: 0;
+  background-color: hsla(20, 50%, 50%);
+}
+
+/*トップページ関連*/
+main {
+  background: hsl(0, 45%, 60%);
+}
+
+section.main_visual {
+  width: 98.95vw;
+  height: 56vw;
+  background: url(img/inside-unsplash01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 80 auto 0;
+  position: relative;
+}
+
+section.main_container {
+  width: 1080px;
+  margin: 0 auto;
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+section.main_container:nth-child(odd) {
+  flex-direction: row-reverse;
+  margin-bottom: 40px;
+}
+
+section.main_container > div {
+  display: block;
+  height: 300px;
+  width: 300px;
+  background: #ccc;
+  border-radius: 8px;
+}
+
+section.main_container > div > img {
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+}
+
+section.main_container > .desc {
+  width: 730px;
+  line-height: 30px;
+  margin-left: 20px;
+}
+
+section.main_container:nth-child(even) > .desc {
+  margin-right: 20px;
+}
+
+section.main_container > .desc > span {
+  font-size: 2rem;
+  background:linear-gradient(transparent 75%, #ff7f7f 75%);
+  font-weight: bold;
+}
+/*ここまでトップページ関連*/
+
+section.caption {
+  margin-top: 80px;
+}
+
+section.caption > h2 {
+  height: 80px;
+  background: hsl(0, 70%, 40%);
+  color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 32px;
+}
+
+/*メニュー関連*/
+section.menus {
+  margin: 0 auto;
+  width: 1200px;
+  background: hsl(0, 40%, 50%);
+  padding: 40px;
+}
+
+.menu-category > p {
+  color: #fff;
+  background: hsl(0, 60%, 40%);
+  font-size: 24px;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.menu-wrap {
+  width: 780px;
+  margin: 0 auto;
+}
+
+.menu-category {
+  margin-bottom: 40px;
+}
+
+.menu-list {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 180px);
+  grid-template-rows: repeat(2, 180px);
+  grid-gap: 20px;
+}
+
+.menu-list.menu-salad,.menu-other {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 180px);
+  grid-template-rows: repeat(1, 180px);
+  grid-gap: 20px;
+}
+
+.menu-list li img {
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+}
+
+.menu-list li {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-list li:hover{
+  opacity: .8;
+}
+.menu-list li > p{
+  position: absolute;
+  bottom: 0;
+  width: 180px;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(200, 85, 2, .6));
+  line-height: 31px;
+}
+
+/*アクセス関連*/
+section.access-wrap {
+  margin: 0 auto;
+  padding-bottom: 20px;
+  width: 1020px;
+}
+
+.map {
+  margin: 40px auto;
+  text-align: center;
+
+}
+
+#target {
+  width: 550px;
+  height: 400px;
+  margin: 0 auto;
+  border: hsl(0, 40%, 50%) outset 5px;
+  border-radius: 5px;
+}
+
+div.access-contents {
+  width: 564px;
+  height: 351px;
+  padding: 30px 50px 20px;
+  background: hsl(15, 80%, 60%);
+  margin: 0 auto 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: hsl(0, 40%, 50%) ridge 5px;
+}
+
+div.access-contents {
+  text-align: right;
+}
+
+div.access-contents p {
+  width: 100%;
+  line-height: 50px;
+  margin-right: 0;
+  border-bottom:2px solid hsl(0, 30%, 30%); 
+  display: flex;
+}
+
+div.access-contents p span{
+  margin-right: 10px;
+}
+
+div.access-contents p:first-child span::after{
+  content: ":";
+  margin-left: 40px;
+}
+
+
+/*お問い合わせ関連*/
+section.contact {
+  width: 1200px;
+  margin: 0 auto;
+  background: hsl(0, 40%, 50%);
+  padding: 40px;
+  padding-bottom: 138px;
+  
+}
+
+section.contact h3 {
+  width: 1020px;
+  margin: 0 auto;
+  background: hsl(20, 40%, 40%);
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 60px;
+  font-weight: bold;
+  padding-left: 20px;
+  
+}
+
+.contact-wrap {
+  width: 1020px;
+  margin: 0 auto;
+  background: hsl(0, 40%, 40%);
+  padding: 20px;
+}
+
+.contact-wrap > form {
+  padding: 0 40px;
+}
+
+
+.contact-wrap label p {
+  margin: 10px 0;
+  color: #000;
+}
+
+
+
+
+.contact-wrap label textarea[name = "content"] {
+  height: calc( 1.3em * 7 );
+  line-height: 1.3;
+  width: 70%;
+}
+
+.contact-wrap label.check {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-wrap label.check p{
+  line-height: 20px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.contact-wrap label.check input[name="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.contact-wrap label.submit {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 120px;
+}
+
+.contact-wrap label.submit > input[name = "submit"] {
+  display       : inline-block;
+  border-radius : 5%;
+  font-size     : 18pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : #900;
+  color         : #fff;
+  line-height   : 1em;
+  transition-property: background, color, box-shadow;
+  transition-duration    : .3s;
+  box-shadow    : 2px 2px 5px rgba(0, 0, 0, .3);
+  border        : 1px solid #990000;
+}
+
+.contact-wrap label.submit > input[name = "submit"]:hover {
+  box-shadow: none;
+  background    : #fff;
+  color         : #900;
+}
+/*フッター*/
+footer {
+  color: #fff;
+  background: hsl(0, 30%, 30%);
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}

@@ -1,0 +1,68 @@
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  background:hsl(0, 30%, 90%);
+  border-radius: 5px;
+}
+
+#app ul {
+  list-style: none;
+  padding: 0;
+  color: #000;
+}
+
+#app h1 {
+  font-size: 16px;
+  border: 4px solid hsl(10, 50%, 40%);
+  border-radius: inherit;
+  padding: 16px 0;
+  background: hsl(10, 40%, 60%);
+  padding: 15px 10px;
+
+ }
+
+#app li {
+  line-height: 1.5;
+}
+
+#app input[type="text"] {
+  padding: 2px;
+}
+
+.close {
+  font-size: 15px;
+  font-weight: bold;
+  color: blue;
+  cursor: pointer;
+}
+
+#app li > span.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.info {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.buttons{
+  margin: 0 0 0 auto;
+  width: 180px;
+}
+
+form {
+  margin: 0 0 0 auto;
+  width: 230px;
+}
+
+input[type="text"] {
+  height: 20px;
+}

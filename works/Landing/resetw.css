@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/* 要素のフォントサイズやマージン・パディングをリセット */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    font-weight: normal;
+}
+
+/* 行の高さをフォントサイズと揃える */
+body {
+    line-height:1;
+}
+
+/* 新規追加要素のデフォルトはすべてインライン要素になっているので、ブロック要素へ変更 */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+/* ulのマーカーを表示しない */
+ol, ul {
+    list-style:none;
+}
+
+/* 引用符の表示が出ないように */
+blockquote, q {
+    quotes:none;
+}
+
+/* blockquote要素、q要素の前後にコンテンツを追加しないように指定 */
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+/* a要素のフォントサイズなどをリセットしフォントの縦方向の揃え位置を親要素のベースラインに揃える */
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* ins要素のデフォルトをセットし、色を変える場合はここで変更できるように */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* mark要素のデフォルトをセットし、色やフォントスタイルを変える場合はここで変更できるように */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+/* テキストに打ち消し線が付くようにしています */
+del {
+    text-decoration: line-through;
+}
+
+/* 隣接するセルのボーダーを重ねて表示し、間隔を0に指定 */
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* 水平罫線のデフォルトである立体的な罫線を見えなく */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+/* 縦方向の揃え位置を中央揃えに指定 */
+input, select {
+    vertical-align:middle;
+}
+
+/* 画像を縦に並べた時に余白が出ないように */
+img {
+    vertical-align:bottom;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* box-sizingを全ブラウザに対応 */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* ボタン部分のカーソルをリンクみたいなポインターに */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+    cursor: pointer;
+    color: inherit;
+}
+
+/* 動きを見たくないとスマホの設定している人用に、すべてのアニメーションとトランジションを削除 */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

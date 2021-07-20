@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/resetw.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <section class="main-visual">
+        <div class="main-visual_wrap">
+            <h1>PORT<br>
+                FOLIO</h1>
+            <p>Suzuki Taiyo</p>
+            <div id="canvas_wrap">
+                <canvas id="mycanvas" width="1080" height="800">Canvas is not supported.</canvas>
+            </div>
+            <span class="material-icons">
+                keyboard_arrow_down
+            </span>
+        </div>
+    </section>
+    <section class="works">
+        <div class="works_wrap">
+            <h2>Works</h2>
+            <ul class="grid-container" id="works">
+                <li>
+                    <img src="img/Landing.png">
+                    <div class="mask">
+                    <p data-id="Landing">ランディングページ</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/soleil.png" alt="">
+                    <div class="mask">
+                        <p data-id="Restaurant">レストランサイト</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/Janken.png" alt="">
+                    <div class="mask">
+                        <p data-id="Janken">ジャンケンゲーム</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/Todolist.png" alt="">
+                    <div class="mask">
+                        <p data-id="Todolist">Todoリスト</p>
+                    </div>
+                </li>
+                <li>
+                    <img class="fit"src="img/Flyer.jpg" alt="">
+                    <div class="mask">
+                        <p data-id="Flyer">フライヤー</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/other.jpg" alt="">
+                    <div class="mask">
+                        <p data-id="Other">グラフィック作品等</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div id="mask" class="hidden"></div>
+
+            <div class="content "  id="Landing">
+            <span class="material-icons close">
+                close
+            </span>
+            <ul>
+                <li><img src="img/works-Landing.png" alt=""></li>
+                <li>
+                    <h3>「ランディングページ」</h3>
+                    <div class="flex_col">
+                        <ul class="content_grid">
+                            <li>制作の留意点：</li>
+                            <li>20~30代の女性をターゲットにしたランディングページです。
+                                ブランドイメージと清潔感を感じられるように心がけました</li>
+                            <li>使用ソフト：</li>
+                            <li>Brackets</li>
+                        </ul>
+                        <p class="link"><a href="works\Landing\index.html">実際のページへ</a></p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+            
+            <div class="content "  id="Restaurant">
+            <span class="material-icons close">
+                close
+                </span>
+            <ul>
+                <li><img src="img/works-soleil.png" alt=""></li>
+                <li>
+                    <h3>「レストランサイト」</h3>
+                    <div class="flex_col">
+                      <ul class="content_grid">
+                            <li>制作の留意点：</li>
+                            <li>誰でも気軽に入れるイタリアンレストランのサイトです。全体的に
+                                カジュアルな印象でまとめ、配色は食欲が出るような暖色でまとめました。</li>
+                            <li>使用ソフト：</li>
+                            <li>Visual Studio Code, Illustrator 2020</li>
+                        </ul>
+                        <p class="link"><a href="works\shop\shop\index.html">実際のページへ</a></p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+
+            <div class="content "  id="Janken">
+            <span class="material-icons close">
+                close
+                </span>
+            <ul>
+                <li><img src="img/works-Janken.png" alt=""></li>
+                <li>
+                    <h3>「ジャンケンゲーム」</h3>
+                    <div class="flex_col">
+                        <ul class="content_grid">
+                            <li>制作の留意点：</li>
+                            <li>HTML/CSS, JavaScriptで作ったじゃんけんゲームです。
+                                ゲームウィンドウなどはCanvasを使用し実装しました。
+                                イラストはIllustratorで作りました。</li>
+                            <li>使用ソフト：</li>
+                            <li>Visual Studio Code, Illustrator 2020</li>
+                        </ul>
+                        <p class="link"><a href="works\Janken\myCreate2\index.html">実際のページへ</a></p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+
+            <div class="content "  id="Todolist">
+            <span class="material-icons close">
+                close
+                </span>
+            <ul>
+                <li><img src="img/works-Todolist.png" alt=""></li>
+                <li>
+                    <h3>「Todoリスト」</h3>
+                    <div class="flex_col">
+                        <ul class="content_grid">
+                            <li>制作の留意点：</li>
+                            <li>JavaScriptのフレームワークであるVue.jsの練習で作った
+                                Todoリストです。Vue.jsについてはこれから知識を深めていきたいと思っています。</li>
+                            <li>使用ソフト：</li>
+                            <li>Visual Studio Code</li>
+                        </ul>
+                        <p class="link"><a href="works/Todolist/index.html">実際のページへ</a></p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+
+            <div class="content "  id="Flyer">
+            <span class="material-icons close">
+                close
+                </span>
+            <ul>
+                <li><img src="img/works-Flyer.jpg" alt=""></li>
+                <li>
+                    <h3>「ブライダルフライヤー」</h3>
+                    <div class="flex_col">
+                        <ul class="content_grid">
+                            <li>制作の留意点：</li>
+                            <li>ブライダルのキャンペーンフライヤーです。春を感じられるような配色にしました。イベント内容が分かるように枠ごとに整列
+                                させました。</li>
+                            <li>使用ソフト：</li>
+                            <li>Illustrator 2020</li>
+                        </ul>
+                        <p class="link"><a href="works/Flyer/index.html">実際のページへ</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="content "  id="Other">
+          <span class="material-icons close">
+            close
+          </span>
+          <ul>
+            <li><img src="img/works-other.jpg" alt=""></li>
+            <li>
+                <h3>「グラフィック作品等」</h3>
+                <div class="flex_col">
+                    <ul class="content_grid">
+                        <li>制作の留意点：</li>
+                        <li>これまでに、IllustratorやPhotoshopで作ったものなどです。</li>
+                        <li>使用ソフト：</li>
+                        <li>Illustrator, Photoshop</li>
+                    </ul>
+                  <p class="link"><a href="works/other/index.html">実際のページへ</a></p>
+                </div>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+    <section class="introduction">
+        <div>
+            <h2>About me</h2>
+        </div>
+        <div class="introduction_wrap">
+            <ul class="introduction_flex">
+                <li class="my-pic"><img src="img/pic.jpg"></li>
+                <li>
+                    <ul class="int_list">
+                        <li>鈴木 太陽 / Suzuki Taiyo</li>
+                        <li>船橋情報ビジネス専門学校</li>
+                        <li> Webクリエイター科在籍</li>
+                        <li><span>できること :</span>HTML/CSS、JavaScript、Illustrator、Photoshop</li>
+                        <li><span>趣味 :</span>散歩、音楽鑑賞、昼寝、ゲーム</li>
+                        <li><span>連絡先 :</span>x20w020@mitsuhashi.ac.jp</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script src='js/intersection-obs.js'></script>
+    <script src='js/main-visual.js'></script>
+    <script src='js/modal.js'></script>
+</body>
+</html>
